@@ -1060,6 +1060,10 @@ span.portfolio-icon {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; /* Smooth transition for fade and scale */
+    transform: scale(0.8); /* Start slightly scaled down */
 }
 
 .landscope-cover ul li:nth-child(1) {

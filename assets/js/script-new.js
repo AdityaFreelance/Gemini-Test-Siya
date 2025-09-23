@@ -7,4 +7,42 @@ document.addEventListener('DOMContentLoaded', function() {
             menuContainer.classList.toggle('active');
         });
     }
+
+    // Landscope Cover Image Animation
+    const landscopeSection = document.querySelector('.landscope-wrapper'); // Assuming .landscope-wrapper is the parent section
+    const landscopeImages = document.querySelectorAll('.landscope-cover ul li .landscope-image img');
+
+    if (landscopeSection && landscopeImages.length > 0) {
+        // Convert NodeList to array and shuffle it
+        const shuffledImages = Array.from(landscopeImages).sort(() => Math.random() - 0.5);
+
+        let imageIndex = 0;
+        let animationStarted = false; // Flag to ensure animation runs only once
+
+        const animateImage = () => {
+            if (imageIndex < shuffledImages.length) {
+                const img = shuffledImages[imageIndex];
+                img.style.visibility = 'visible';
+                img.style.opacity = '1';
+                img.style.transform = 'scale(1)';
+                imageIndex++;
+                setTimeout(animateImage, 200); // Decreased delay between images for faster animation
+            }
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !animationStarted) {
+                    // Start the animation when the section enters the viewport
+                    animationStarted = true;
+                    setTimeout(animateImage, 500); // Decreased initial delay for faster animation
+                    observer.disconnect(); // Disconnect after triggering once
+                }
+            });
+        }, {
+            threshold: 0.2 // Trigger when 20% of the section is visible
+        });
+
+        observer.observe(landscopeSection);
+    }
 });
