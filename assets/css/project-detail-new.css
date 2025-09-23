@@ -1,6 +1,6 @@
 :root {
-    --background-color: #231F20;
-    --font-color: #F1E9E6;
+    --primary-color: #231F20;
+    --secondry-color: #F1E9E6;
 
     /* 
       Step 1: The single base font size variable you requested.
@@ -12,17 +12,22 @@
       The format is: calc(var(--base-font-size) * [multiplier]).
     */
     --font-16px: var(--base-font-size);
-    --font-20px: calc(var(--base-font-size) * 1.25); /* 16 * 1.25 = 20 */
-    --font-24px: calc(var(--base-font-size) * 1.5);  /* 16 * 1.5 = 24 */
-    --font-32px: calc(var(--base-font-size) * 2);    /* 16 * 2 = 32 */
-    --font-96px: calc(var(--base-font-size) * 6);    /* 16 * 6 = 96 */
+    --font-20px: calc(var(--base-font-size) * 1.25);
+    /* 16 * 1.25 = 20 */
+    --font-24px: calc(var(--base-font-size) * 1.5);
+    /* 16 * 1.5 = 24 */
+    --font-32px: calc(var(--base-font-size) * 2);
+    /* 16 * 2 = 32 */
+    --font-96px: calc(var(--base-font-size) * 6);
+    /* 16 * 6 = 96 */
 }
 
 body {
     font-family: "Lexend", sans-serif;
-    background-color: var(--background-color);
-    color: var(--font-color);
-    font-size: var(--font-16px); /* Set a default body font size */
+    background-color: var(--primary-color);
+    color: var(--secondry-color);
+    font-size: var(--font-16px);
+    /* Set a default body font size */
 }
 
 /*
@@ -30,7 +35,8 @@ body {
   All other font sizes will recalculate automatically.
 */
 @media (max-width: 768px) {
-  :root {
-    --base-font-size: 14px; /* Change this one value to scale everything down */
-  }
+    :root {
+        --base-font-size: 14px;
+        /* Change this one value to scale everything down */
+    }
 }
