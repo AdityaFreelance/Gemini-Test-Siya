@@ -1,6 +1,6 @@
 :root {
     --primary-color: #231F20;
-    --secondry-color: #F1E9E6;
+    --secondry-color: #fff;
 
     /* 
       Step 1: The single base font size variable you requested.
@@ -20,7 +20,7 @@
 
 body {
     font-family: "Lexend", sans-serif;
-    background-color: var(--secondry-color);
+    background-color: #fff;
     color: var(--primary-color);
     font-size: var(--font-16px);
 }
@@ -42,9 +42,15 @@ body {
 }
 
 .menu-toggle {
-    background: transparent;
+    background: var(--primary-color);
     border: none;
     cursor: pointer;
+    width: 51px;
+    height: 60px;
+    border-radius: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu-toggle svg path {
@@ -102,4 +108,8 @@ body {
     .menu-container .nav-link {
         color: var(--secondry-color);
     }
+}
+
+ndry-color);
+}
 }
