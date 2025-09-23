@@ -30,6 +30,44 @@ body {
     /* Set a default body font size */
 }
 
+/* General Container */
+.container {
+    max-width: 93%;
+    padding-inline: 15px;
+    margin: 0 auto;
+}
+
+/* Header */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.menu-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden on desktop */
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: var(--secondry-color);
+    text-decoration: none;
+    font-size: var(--font-16px);
+}
+
+
 /*
   Step 3: For responsiveness, just change the --base-font-size variable.
   All other font sizes will recalculate automatically.
@@ -38,5 +76,29 @@ body {
     :root {
         --base-font-size: 14px;
         /* Change this one value to scale everything down */
+    }
+
+    .menu-toggle {
+        display: block; /* Show on mobile */
+    }
+
+    header nav {
+        display: none; /* Hide nav on mobile by default */
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        padding: 20px 0;
+        z-index: 100;
+    }
+
+    header nav.active {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 }
