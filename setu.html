@@ -18,21 +18,24 @@
 <body>
     <header>
         <div class="container">
-            <button class="menu-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="22" viewBox="0 0 29 22" fill="none">
-                    <path d="M2.0271 2H27.0793" stroke="#F1E9E6" stroke-width="2.67857" stroke-linecap="round"/>
-                    <path d="M2.0271 11H23.0709" stroke="#F1E9E6" stroke-width="2.45495" stroke-linecap="round"/>
-                    <path d="M2.0271 19.8571H27.0793" stroke="#F1E9E6" stroke-width="2.67857" stroke-linecap="round"/>
-                </svg>
-            </button>
-            <nav>
-                <ul>
-                    <li><a href="#">Overview</a></li>
-                    <li><a href="#">Research</a></li>
-                    <li><a href="#">Development</a></li>
-                    <li><a href="#">Testing</a></li>
-                    <li><a href="#">Final Product</a></li>
-                </ul>
+            <nav class="navbar">
+                <button type="button" class="menu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="22" viewBox="0 0 29 22" fill="none">
+                        <path d="M2.0271 2H27.0793" stroke="#F1E9E6" stroke-width="2.67857" stroke-linecap="round" />
+                        <path d="M2.0271 11H23.0709" stroke="#F1E9E6" stroke-width="2.45495" stroke-linecap="round" />
+                        <path d="M2.0271 19.8571H27.0793" stroke="#F1E9E6" stroke-width="2.67857"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+                <div class="menu-container">
+                    <ul class="navbar-list">
+                        <li class="nav-items"><a href="#" class="nav-link">Overview</a></li>
+                        <li class="nav-items"><a href="#" class="nav-link">Research</a></li>
+                        <li class="nav-items"><a href="#" class="nav-link">Development</a></li>
+                        <li class="nav-items"><a href="#" class="nav-link">Testing</a></li>
+                        <li class="nav-items"><a href="#" class="nav-link">Final Product</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -43,7 +46,7 @@
     <script src="assets/js/script-new.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init();
     </script>
 </body>
 

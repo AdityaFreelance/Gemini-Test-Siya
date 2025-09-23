@@ -39,8 +39,8 @@ body {
 
 /* Header */
 header .container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Left, Center, Right columns */
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -50,7 +50,12 @@ header .container {
     background: transparent;
     border: none;
     cursor: pointer;
-    display: none; /* Hidden on desktop */
+    grid-column: 1 / 2;      /* Position in the left column */
+    justify-self: start;   /* Align to the start of the column */
+}
+
+nav {
+    grid-column: 2 / 3; /* Position in the center column */
 }
 
 nav ul {
@@ -78,10 +83,7 @@ nav a {
         /* Change this one value to scale everything down */
     }
 
-    .menu-toggle {
-        display: block; /* Show on mobile */
-    }
-
+    /* On mobile, the nav itself is hidden, but the toggle button remains visible */
     header nav {
         display: none; /* Hide nav on mobile by default */
         position: absolute;
@@ -91,6 +93,7 @@ nav a {
         background-color: var(--primary-color);
         padding: 20px 0;
         z-index: 100;
+        grid-column: 1 / -1; /* Span all columns when active */
     }
 
     header nav.active {
