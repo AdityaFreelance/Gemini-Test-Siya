@@ -737,6 +737,24 @@ ul.research-list li:nth-child(1) .research-box-container p::after,
 
 /* main-insight-wrapper Css Start */
 
+.main-insight-slider {
+    overflow: hidden;
+}
+
+.main-insight-slider ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: transform 1s linear;
+}
+
+.main-insight-slider ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 
 
 
