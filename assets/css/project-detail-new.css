@@ -1,3 +1,14 @@
+:root {
+    --background-color: #231F20;
+    --font-color: #F1E9E6;
+}
+
+html {
+    font-size: 16px;
+}
+
 body {
     font-family: "Lexend", sans-serif;
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
