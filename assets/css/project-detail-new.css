@@ -2,25 +2,35 @@
     --background-color: #231F20;
     --font-color: #F1E9E6;
 
-    /* Font Sizes */
-    --font-size-base: 1rem; /* 1rem is typically 16px in browsers */
-    --font-size-lg: 1.25rem;
-    --font-size-xl: 1.5rem;
-    --font-size-sm: 0.875rem;
+    /* 
+      Step 1: The single base font size variable you requested.
+    */
+    --base-font-size: 16px;
+
+    /* 
+      Step 2: Calculate all other font sizes based on the single variable.
+      The format is: calc(var(--base-font-size) * [multiplier]).
+    */
+    --font-16px: var(--base-font-size);
+    --font-20px: calc(var(--base-font-size) * 1.25); /* 16 * 1.25 = 20 */
+    --font-24px: calc(var(--base-font-size) * 1.5);  /* 16 * 1.5 = 24 */
+    --font-32px: calc(var(--base-font-size) * 2);    /* 16 * 2 = 32 */
+    --font-96px: calc(var(--base-font-size) * 6);    /* 16 * 6 = 96 */
 }
 
 body {
     font-family: "Lexend", sans-serif;
     background-color: var(--background-color);
     color: var(--font-color);
-    font-size: var(--font-size-base);
+    font-size: var(--font-16px); /* Set a default body font size */
 }
 
-/* Example for responsive changes */
+/*
+  Step 3: For responsiveness, just change the --base-font-size variable.
+  All other font sizes will recalculate automatically.
+*/
 @media (max-width: 768px) {
-    :root {
-        --font-size-base: 0.9rem; /* Adjust base size for smaller screens */
-        --font-size-lg: 1.1rem;
-        --font-size-xl: 1.3rem;
-    }
+  :root {
+    --base-font-size: 14px; /* Change this one value to scale everything down */
+  }
 }
