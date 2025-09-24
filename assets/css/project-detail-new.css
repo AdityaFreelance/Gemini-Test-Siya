@@ -1647,7 +1647,6 @@ span.portfolio-icon {
 
 .home-cover-row {
     display: flex;
-    flex-wrap: wrap;
     margin-inline: -57px;
 }
 
@@ -1771,6 +1770,20 @@ span.portfolio-icon {
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.home-cover-container {
+    overflow: hidden;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 

@@ -45,4 +45,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
         observer.observe(landscopeSection);
     }
+
+    // Home-wrapper slider
+    const sliderContainer = document.querySelector(".home-cover-container");
+    const sliderRow = document.querySelector(".home-cover-row");
+    const slides = document.querySelectorAll(".home-cover-col");
+
+    if (sliderRow && slides.length > 0) {
+        const originalSlidesCount = slides.length;
+        let clones = [];
+
+        // Clone slides for infinite loop
+        slides.forEach(slide => {
+            const clone = slide.cloneNode(true);
+            sliderRow.appendChild(clone);
+            clones.push(clone);
+        });
+
+        let position = 0;
+        const speed = 2; // Adjust speed as needed
+
+        function animateSlider() {
+            position -= speed;
+            const totalWidth = originalSlidesCount * slides[0].offsetWidth;
+            if (position <= -totalWidth) {
+                position = 0;
+            }
+            sliderRow.style.transform = `translateX(${position}px)`;
+            requestAnimationFrame(animateSlider);
+        }
+
+        animateSlider();
+    }
 });
