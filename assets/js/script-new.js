@@ -79,86 +79,209 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Testing Slider
-    const testingSliderContainer = document.querySelector('.testing-wrapper'); // Assuming .testing-wrapper is the container for overflow:hidden
+    const testingSliderContainer = document.querySelector('.testing-wrapper');
     const testingSliderRow = document.querySelector('.testing-slider-row');
-    const testingOriginalCols = Array.from(document.querySelectorAll('.testing-slider-row .testing-slider-col'));
     const testingSliderDotsContainer = document.querySelector('.testing-slider-dots');
 
-    if (testingSliderRow && testingOriginalCols.length > 0 && testingSliderDotsContainer) {
-        const originalSlideCount = testingOriginalCols.length;
-        const slidesToClone = originalSlideCount; // Clone all original slides for seamless loop
+    console.log('Testing Slider: Initializing...');
+    console.log('testingSliderRow:', testingSliderRow);
+    console.log('testingSliderDotsContainer:', testingSliderDotsContainer);
 
-        // Clone last few slides and prepend them
+    if (testingSliderRow && testingSliderDotsContainer) {
+        const testingOriginalCols = Array.from(testingSliderRow.querySelectorAll('.testing-slider-col'));
+        console.log('testingOriginalCols (before clear):', testingOriginalCols);
+
+        if (testingOriginalCols.length === 0) {
+            console.log('Testing Slider: No original slides found. Exiting.');
+            return;
+        }
+
+        testingSliderRow.innerHTML = '';
+        testingSliderDotsContainer.innerHTML = '';
+        console.log('Testing Slider: innerHTML cleared.');
+
+        const originalSlideCount = testingOriginalCols.length;
+        const slidesToClone = originalSlideCount;
+        console.log('originalSlideCount:', originalSlideCount);
+        console.log('slidesToClone:', slidesToClone);
+
+        const fragment = document.createDocumentFragment();
+
         for (let i = 0; i < slidesToClone; i++) {
             const clone = testingOriginalCols[originalSlideCount - 1 - i].cloneNode(true);
-            testingSliderRow.prepend(clone);
+            fragment.appendChild(clone);
+            console.log('Testing Slider: Prepended clone to fragment:', clone);
         }
 
-        // Clone first few slides and append them
+        testingOriginalCols.forEach(slide => {
+            fragment.appendChild(slide.cloneNode(true));
+            console.log('Testing Slider: Appended original slide clone to fragment:', slide.cloneNode(true));
+        });
+
         for (let i = 0; i < slidesToClone; i++) {
             const clone = testingOriginalCols[i].cloneNode(true);
-            testingSliderRow.appendChild(clone);
+            fragment.appendChild(clone);
+            console.log('Testing Slider: Appended clone to fragment:', clone);
         }
 
-        const allTestingSlides = Array.from(document.querySelectorAll('.testing-slider-row .testing-slider-col'));
+        testingSliderRow.appendChild(fragment);
+        console.log('Testing Slider: Fragment appended to testingSliderRow.');
+
+        const allTestingSlides = Array.from(testingSliderRow.children);
         const totalSlidesWithClones = allTestingSlides.length;
+        console.log('allTestingSlides (after cloning):', allTestingSlides);
+        console.log('totalSlidesWithClones:', totalSlidesWithClones);
 
-        let testingCurrentIndex = slidesToClone; // Start at the first original slide
+        let testingCurrentIndex = slidesToClone;
+        console.log('testingCurrentIndex (initial):', testingCurrentIndex);
 
-        // Set initial width for the slider row and individual slides
         testingSliderRow.style.width = `${totalSlidesWithClones * 100}%`;
         allTestingSlides.forEach(col => {
             col.style.width = `${100 / totalSlidesWithClones}%`;
         });
+        console.log('testingSliderRow.style.width:', testingSliderRow.style.width);
+        allTestingSlides.forEach((col, index) => console.log(`Slide ${index} width:`, col.style.width));
 
-        // Create dots
+
         for (let i = 0; i < originalSlideCount; i++) {
             const li = document.createElement('li');
             const button = document.createElement('button');
             button.addEventListener('click', () => {
-                testingCurrentIndex = slidesToClone + i; // Go to the corresponding original slide
-                updateTestingSlider(true); // true for smooth transition
+                testingCurrentIndex = slidesToClone + i;
+                updateTestingSlider(true);
                 updateTestingDots();
             });
             li.appendChild(button);
             testingSliderDotsContainer.appendChild(li);
+            console.log('Testing Slider: Created dot for original slide:', i);
         }
 
         const testingDots = testingSliderDotsContainer.querySelectorAll('button');
+        console.log('testingDots:', testingDots);
 
         function updateTestingSlider(smooth = true) {
+            console.log('updateTestingSlider called. smooth:', smooth);
             testingSliderRow.style.transition = smooth ? 'transform 0.5s ease-in-out' : 'none';
-            testingSliderRow.style.transform = `translateX(-${testingCurrentIndex * (100 / totalSlidesWithClones)}%)`;
+            const translateXValue = `translateX(-${testingCurrentIndex * (100 / totalSlidesWithClones)}%)`;
+            testingSliderRow.style.transform = translateXValue;
+            console.log('testingCurrentIndex:', testingCurrentIndex, 'translateX:', translateXValue);
         }
 
         function updateTestingDots() {
+            console.log('updateTestingDots called.');
             const activeDotIndex = (testingCurrentIndex - slidesToClone) % originalSlideCount;
+            console.log('activeDotIndex:', activeDotIndex);
             testingDots.forEach((dot, index) => {
                 if (index === activeDotIndex) {
                     dot.classList.add('active');
+                    console.log('Dot', index, 'activated.');
                 } else {
                     dot.classList.remove('active');
+                    console.log('Dot', index, 'deactivated.');
                 }
             });
         }
 
         function nextTestingSlide() {
+            console.log('nextTestingSlide called.');
             testingCurrentIndex++;
             updateTestingSlider();
             updateTestingDots();
 
             if (testingCurrentIndex >= originalSlideCount + slidesToClone) {
+                console.log('Testing Slider: Jumping to first original slide.');
                 setTimeout(() => {
-                    testingCurrentIndex = slidesToClone; // Jump to the first original slide
-                    updateTestingSlider(false); // false for instant jump
+                    testingCurrentIndex = slidesToClone;
+                    updateTestingSlider(false);
+                }, 500);
+            }
+        }
+
+        console.log('Testing Slider: Initial setup.');
+        updateTestingSlider(false);
+        updateTestingDots();
+
+        setInterval(nextTestingSlide, 3000);
+    }
+
+    // Final Wrapper Slider
+    const finalWrapperCover = document.querySelector('.final-wrapper-cover');
+    const finalWrapperRow = document.querySelector('.final-wrapper-row');
+    const finalWrapperMain = document.querySelector('.final-wrapper-main');
+    const initialFinalOriginalCols = Array.from(document.querySelectorAll('.final-wrapper-row .final-wrapper-col')); // Get initial slides before clearing
+
+    if (finalWrapperRow && initialFinalOriginalCols.length > 0 && finalWrapperCover && finalWrapperMain) {
+        const originalFinalSlideCount = initialFinalOriginalCols.length; // Should be 2
+        const slidesVisible = 2; // Number of slides visible at once (one left, one right of main)
+        const finalSlidesToClone = slidesVisible; // Clone enough slides for seamless loop (2 from each end)
+
+        // Clear existing children to avoid duplicates if script runs multiple times
+        finalWrapperRow.innerHTML = '';
+
+        const fragment = document.createDocumentFragment();
+
+        // Prepend clones (last original slides)
+        for (let i = finalSlidesToClone - 1; i >= 0; i--) { // Iterate backwards for correct prepending order
+            const clone = initialFinalOriginalCols[originalFinalSlideCount - 1 - i].cloneNode(true);
+            fragment.prepend(clone); // Prepend to fragment
+        }
+        // Append original slides
+        initialFinalOriginalCols.forEach(slide => {
+            fragment.appendChild(slide.cloneNode(true));
+        });
+        // Append clones (first original slides)
+        for (let i = 0; i < finalSlidesToClone; i++) {
+            const clone = initialFinalOriginalCols[i].cloneNode(true);
+            fragment.appendChild(clone);
+        }
+
+        finalWrapperRow.appendChild(fragment); // Append fragment to the row
+
+        const allFinalSlides = Array.from(finalWrapperRow.children); // Get all slides including clones
+        const totalFinalSlidesWithClones = allFinalSlides.length; // Should be 2 (original) + 2 (prepended) + 2 (appended) = 6
+
+        let finalCurrentIndex = finalSlidesToClone; // Start at the first original slide (index 2)
+
+        // Set initial width for the slider row and individual slides
+        finalWrapperRow.style.width = `${totalFinalSlidesWithClones * 25}vw`; // Each slide is 25vw
+        allFinalSlides.forEach(col => {
+            col.style.width = `25vw`;
+        });
+
+        function updateFinalSlider(smooth = true) {
+            finalWrapperRow.style.transition = smooth ? 'transform 0.5s ease-in-out' : 'none';
+            finalWrapperRow.style.transform = `translateX(-${finalCurrentIndex * 25}vw)`;
+
+            // Update opacity
+            allFinalSlides.forEach((slide, index) => {
+                // The slides visible are at finalCurrentIndex (left) and finalCurrentIndex + 3 (right)
+                // This is because final-wrapper-main is in the middle, taking up 2 slides worth of space.
+                // So, the slides at index `finalCurrentIndex` and `finalCurrentIndex + 3` should have opacity 1.
+                // All other slides should have opacity 0.
+                if (index === finalCurrentIndex || index === finalCurrentIndex + 3) {
+                    slide.classList.add('active-slide');
+                } else {
+                    slide.classList.remove('active-slide');
+                }
+            });
+        }
+
+        function nextFinalSlide() {
+            finalCurrentIndex++;
+            updateFinalSlider();
+
+            // Seamless loop logic
+            if (finalCurrentIndex >= originalFinalSlideCount + finalSlidesToClone) {
+                setTimeout(() => {
+                    finalCurrentIndex = finalSlidesToClone; // Jump to the first original slide
+                    updateFinalSlider(false); // false for instant jump
                 }, 500); // Match this with CSS transition duration
             }
         }
 
         // Initial setup
-        updateTestingSlider(false); // Set initial position instantly
-        updateTestingDots();
+        updateFinalSlider(false); // Set initial position instantly
 
-        setInterval(nextTestingSlide, 3000);
+        setInterval(nextFinalSlide, 3000);
     }
 });

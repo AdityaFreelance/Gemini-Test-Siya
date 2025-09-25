@@ -35,6 +35,10 @@
     --font-96px: calc(var(--base-font-size) * 6);
 }
 
+html {
+    overflow-x: hidden !important;
+}
+
 body {
     font-family: var(--primary-font);
     background-color: #fff;
@@ -3861,13 +3865,16 @@ span.portfolio-icon {
 .testing-slider-row {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: fit-content;
-    /* Allow content to define width initially */
+    /* width will be set by JS */
 }
 
-.testing-slider-col {
-    width: 100%;
-    /* Ensure each slide is 100% width */
+ul.testing-slider-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px 40px;
+    list-style: none;
+    margin-block: 40px;
 }
 
 .testing-slider-dots {
@@ -3910,25 +3917,59 @@ span.portfolio-icon {
     margin-bottom: 25px;
 }
 
-.final-wrapper-row {
+.final-wrapper-cover {
+    position: relative;
+    margin-top: 0px;
+    overflow: hidden;
+    /* This will hide the parts of the slides that are outside the visible area */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    /* Use flexbox to position children */
     align-items: center;
+    /* Vertically center items */
+    justify-content: center;
+    /* Horizontally center items */
+    height: 500px;
+    /* Example height, adjust as needed */
+}
+
+.final-wrapper-row {
+    position: absolute;
+    /* Position absolutely within final-wrapper-cover */
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* This width will be set by JS to accommodate all slides (original + clones) */
+    /* It needs to be wide enough to hold all slides side-by-side */
+    width: auto;
+    /* Will be overridden by JS */
 }
 
 .final-wrapper-col {
-    width: 25%;
-    flex: 0 0 auto;
+    flex: 0 0 25vw;
+    /* Each slide takes 25vw */
+    width: 25vw;
+    /* Each slide takes 25vw */
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    /* Default opacity */
+    transition: opacity 0.5s ease-in-out;
+    /* Smooth transition for opacity */
+}
+
+.final-wrapper-col.active-slide {
+    opacity: 1;
 }
 
 .fina-wrapper-image img {
     width: 100%;
-}
-
-.final-wrapper-cover {
-    position: relative;
-    margin-top: 100px;
+    height: auto;
+    display: block;
 }
 
 .final-wrapper-main {
@@ -3937,12 +3978,24 @@ span.portfolio-icon {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50%;
+    /* This width will determine the "gap" between left and right slides */
     padding-inline: 40px;
+    z-index: 2;
+    /* Higher z-index to appear above sliding columns */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Add a background to hide content behind it */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
 }
 
 .final-wrapper-image img {
     width: 100%;
 }
+
+/* final-wrapper Css End */
+
+
+/* accordion-wrapper Css Start */
 
 
 
