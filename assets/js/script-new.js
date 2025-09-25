@@ -317,11 +317,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-$(document).ready(function(){
+$(document).ready(function () {
     $('.project-row').slick({
-        slidesToShow: 2.2,
+        slidesToShow: 2,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         dots: false,
         infinite: true,
         autoplay: true,
