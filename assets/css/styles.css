@@ -1998,6 +1998,12 @@ html {
     transform: rotate(-8deg);
 }
 
+.project-row .slick-slide {
+    margin: 0 10px;
+    width: calc(50% - 20px);
+}
+
+
 .polaroid-image.rotated-right {
     transform: rotate(8deg);
 }

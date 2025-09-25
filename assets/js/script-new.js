@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.menu-toggle');
     const menuContainer = document.querySelector('.menu-container');
 
     if (menuToggle && menuContainer) {
-        menuToggle.addEventListener('click', function() {
+        menuToggle.addEventListener('click', function () {
             menuContainer.classList.toggle('active');
         });
     }
@@ -313,5 +313,29 @@ document.addEventListener('DOMContentLoaded', function () {
                 accordionContent.style.maxHeight = null;
             }
         });
+    });
+});
+
+
+// Inject additional styles
+const styleSheet = document.createElement('style');
+styleSheet.textContent = additionalStyles;
+document.head.appendChild(styleSheet);
+
+document.addEventListener('DOMContentLoaded', function () {
+    $('.project-row').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 });

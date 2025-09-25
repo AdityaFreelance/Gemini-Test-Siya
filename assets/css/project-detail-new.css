@@ -4380,8 +4380,111 @@ ul.testing-slider-dots {
     padding: 15px 30px;
 }
 
+.process-image img {
+    width: 100%;
+}
 
+/* process-wrapper Css End */
 
+/* project-wrapper Css Start */
+
+.project-heading span {
+    font-weight: 400;
+    font-size: var(--font-24px);
+    display: inline-block;
+    margin-bottom: 25px;
+    color: var(--para-line-color);
+}
+
+.project-heading h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    margin-bottom: 0px;
+}
+
+.project-list-btn {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #212021;
+    padding: 20px 30px;
+    color: #fff;
+}
+
+.project-wrapper-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.project-wrapper .custom-row {
+    gap: 50px 0px;
+}
+
+.project-wrapper .container {
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+.project-box {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-box.blue .project-image {
+    background: #012169;
+}
+
+.project-image {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-box.blue .project-image img {
+    width: auto !important;
+    height: auto !important;
+}
+
+.project-content {
+    position: absolute;
+    bottom: 0px;
+    padding: 18px 18px;
+    background: #181717;
+    width: 100%;
+    border-radius: 0px 0px 20px 20px;
+    height: auto !important;
+}
+
+.project-content h3 {
+    font-weight: 400;
+    font-size: var(--font-18px);
+    margin-bottom: 5px;
+    line-height: normal;
+    color: #fff;
+}
+
+.project-content p {
+    font-weight: 200;
+    font-size: var(--font-18px);
+    line-height: normal;
+    margin-bottom: 0px;
+    color: #fff;
+}
+
+.project-cover .slick-list.draggable {
+    padding-right: 10%;
+}
+.project-row .slick-slide{
+    margin-inline: 30px;
+}
 
 
 
