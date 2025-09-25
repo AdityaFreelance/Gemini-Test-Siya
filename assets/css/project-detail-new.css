@@ -3897,6 +3897,53 @@ span.portfolio-icon {
 
 /* testing-wrapper Css End */
 
+/* final-wrapper Css Start */
+.final-wrapper h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    margin-bottom: 25px;
+}
+
+.final-wrapper p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    margin-bottom: 25px;
+}
+
+.final-wrapper-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.final-wrapper-col {
+    width: 25%;
+    flex: 0 0 auto;
+}
+
+.fina-wrapper-image img {
+    width: 100%;
+}
+
+.final-wrapper-cover {
+    position: relative;
+    margin-top: 100px;
+}
+
+.final-wrapper-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    padding-inline: 40px;
+}
+
+.final-wrapper-image img {
+    width: 100%;
+}
+
 
 
 
