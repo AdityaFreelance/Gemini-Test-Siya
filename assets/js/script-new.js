@@ -317,18 +317,15 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Inject additional styles
-const styleSheet = document.createElement('style');
-styleSheet.textContent = additionalStyles;
-document.head.appendChild(styleSheet);
-
-document.addEventListener('DOMContentLoaded', function () {
+$(document).ready(function(){
     $('.project-row').slick({
-        slidesToShow: 2,
+        slidesToShow: 2.2,
         slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
         dots: false,
         infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
         responsive: [
             {
                 breakpoint: 768,
@@ -339,3 +336,8 @@ document.addEventListener('DOMContentLoaded', function () {
         ]
     });
 });
+
+// Inject additional styles
+const styleSheet = document.createElement('style');
+styleSheet.textContent = additionalStyles;
+document.head.appendChild(styleSheet);
