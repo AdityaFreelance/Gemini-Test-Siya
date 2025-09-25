@@ -285,3 +285,33 @@ document.addEventListener('DOMContentLoaded', function() {
         setInterval(nextFinalSlide, 3000);
     }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const accordionBtns = document.querySelectorAll('.accordion-btn');
+
+    accordionBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const accordionBox = this.parentElement;
+            const accordionContent = accordionBox.querySelector('.accordion-box-content');
+
+            // Close all other accordions
+            document.querySelectorAll('.accordion-box').forEach(box => {
+                if (box !== accordionBox) {
+                    box.querySelector('.accordion-btn').classList.remove('accordion-active-btn');
+                    box.querySelector('.accordion-box-content').classList.remove('accordion-content-active');
+                    box.querySelector('.accordion-box-content').style.maxHeight = null;
+                }
+            });
+
+            // Toggle current accordion
+            this.classList.toggle('accordion-active-btn');
+            accordionContent.classList.toggle('accordion-content-active');
+
+            if (accordionContent.classList.contains('accordion-content-active')) {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+            } else {
+                accordionContent.style.maxHeight = null;
+            }
+        });
+    });
+});
