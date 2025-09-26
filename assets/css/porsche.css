@@ -1,0 +1,167 @@
+/* banner-wrapper Css Start */
+.banner-wrapper {
+    background-image: url(../img/porsche/Banner-image.png);
+}
+
+/* banner-wrapper Css End */
+
+/*detail-wrapper Css Start */
+.detail-section-heading p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    margin-bottom: 0px;
+}
+
+/*detail-wrapper Css End */
+
+/* portfolio-wrapper Css Start */
+
+.portfolio-wrapper .container>.custom-row .custom-col-12:nth-child(2n) .custom-row .custom-col-6:has(.port-content) {
+    order: -1;
+}
+
+/* portfolio-wrapper Css End */
+
+
+/* design-wrapper Css Start */
+
+.design-cover>.custom-row {
+    margin-inline: -85px;
+    gap: 60px 0px;
+}
+
+.design-cover>.custom-row>.custom-col-6 {
+    padding-inline: 85px;
+}
+
+.design-box .custom-row {
+    margin-inline: -45px;
+}
+
+.design-box .custom-row .custom-col-7,
+.design-box .custom-row .custom-col-5 {
+    padding-inline: 45px;
+    position: relative;
+}
+
+.design-box .custom-row .custom-col-7::before {
+    content: "";
+    width: 40px;
+    height: 1px;
+    border-top: 1px dotted #231F20;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1px;
+}
+
+.design-box .custom-row .custom-col-5::after {
+    content: "";
+    width: 45px;
+    height: 1px;
+    border-top: 1px dotted #231F20;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+}
+
+.design-box-cover {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
+    background: #D7D1B3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.design-box-cover::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    background: #231F20;
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    left: -3px;
+    z-index: -1;
+}
+
+.design-cover .custom-row .custom-col-6 .design-box .custom-row .custom-col-5 p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    position: relative;
+}
+
+.design-cover .custom-row .custom-col-6 .design-box .custom-row .custom-col-5 p::after {
+    content: "";
+    width: 7px;
+    height: 41px;
+    display: inline-block;
+    background: #231F20;
+    position: absolute;
+    right: -7px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 2px;
+}
+
+.design-cover .custom-row .custom-col-6:nth-child(2n) .design-box .custom-col-7 {
+    order: -1;
+}
+
+.design-cover .custom-row .custom-col-6:nth-child(2n) .custom-col-5 p::after {
+    right: initial !important;
+    left: -7px;
+}
+
+.design-cover .custom-row .custom-col-6:nth-child(2n) .custom-col-7 .design-box-cover::before {
+    left: initial !important;
+    right: -3px;
+}
+
+.design-cover .custom-row .custom-col-6:nth-child(2n) .custom-col-7::before {
+    left: initial !important;
+    right: 1px;
+}
+
+.design-cover .custom-row .custom-col-6:nth-child(2n) .custom-col-5::after {
+    right: initial !important;
+    left: 0px;
+}
+
+.design-box-cover h3 {
+    font-weight: 400;
+    font-size: var(--font-24px);
+    margin-bottom: 0px;
+}
+
+.design-box.active .design-box-cover {
+    background: #8E834C;
+}
+
+.design-box.active h3 {
+    color: #fff;
+}
+
+span.active-profile {
+    display: inline-block;
+    height: 145px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -125px;
+    z-index: -1;
+}
+
+.design-cover {
+    margin-top: 125px;
+}
+/* design-wrapper Css End */

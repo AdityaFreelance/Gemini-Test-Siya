@@ -4482,9 +4482,12 @@ ul.testing-slider-dots {
 .project-cover .slick-list.draggable {
     padding-right: 10%;
 }
-.project-row .slick-slide{
+
+.project-row .slick-slide {
     margin-inline: 30px;
 }
+
+/* project-wrapper Css End */
 
 
 
