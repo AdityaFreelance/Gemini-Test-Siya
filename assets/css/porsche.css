@@ -863,3 +863,23 @@ span.active-profile {
 }
 
 /* storyboard-wrapper Css End */
+
+/* infotainment-guideline-wrapper Css Start */
+.infotainment-guideline-wrapper .custom-row{
+    margin-inline: -50px;
+}
+.infotainment-guideline-wrapper .custom-row .custom-col-6{
+    padding-inline: 50px;
+}
+.infotainment-guideline-wrapper h2{
+    font-weight: 400;
+    font-size: var(--font-32px);
+    line-height: normal;
+    margin-bottom: 25px;
+}
+.infotainment-guideline-wrapper p{
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    margin-bottom: 0px;
+}
