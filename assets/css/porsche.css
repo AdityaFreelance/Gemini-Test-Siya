@@ -1065,3 +1065,253 @@ span.active-profile {
 .deciding-image img {
     width: 100%;
 }
+
+/* deciding-wrapper Css Start */
+
+/* porsche-user-testing-wrapper Css Start */
+.porsche-user-testing-wrapper>.container>.custom-row {
+    margin-inline: -85px;
+}
+
+.porsche-user-testing-wrapper>.container>.custom-row>.custom-col-4,
+.porsche-user-testing-wrapper>.container>.custom-row>.custom-col-8 {
+    padding-inline: 85px;
+}
+
+.porsche-user-heading h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    line-height: normal;
+    margin-bottom: 42px;
+}
+
+.porsche-user-heading h3 {
+    font-weight: 400;
+    font-size: var(--font-24px);
+    line-height: normal;
+    color: #8E834C;
+    margin-bottom: 15px;
+}
+
+.porsche-user-heading p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+.porsche-user-heading ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: -25px;
+}
+
+.porsche-user-heading ul li {
+    width: 33.333%;
+    flex: 0 0 auto;
+    padding-inline: 25px;
+}
+
+.porsche-user-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.porsche-image {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.68) 100%), url(../img/porsche/target-image1.png) lightgray 50% / cover no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 9;
+    padding: 70px 50px;
+    min-height: 350px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.porsche-image h3 {
+    font-weight: 400;
+    font-size: var(--font-24px);
+    line-height: normal;
+    color: #F1E9E6;
+    position: relative;
+    padding-top: 25px;
+    margin-bottom: 25px;
+}
+
+.porsche-image h3::before {
+    content: "";
+    width: 41px;
+    height: 9px;
+    border-radius: 2px;
+    background: #F1E9E6;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.porsche-image p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    color: #F1E9E6;
+    margin-bottom: 0px;
+}
+
+.porsche-user-image-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: -50px;
+}
+
+.porsche-user-col {
+    width: 50%;
+    flex: 0 0 auto;
+    padding-inline: 50px;
+}
+
+/* porsche-user-testing-wrapper Css End */
+
+/* early-friction-wrapper Css Start */
+.early-friction-wrapper .custom-row {
+    gap: 25px 0px;
+}
+
+.early-friction-wrapper h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.early-friction-wrapper p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+.early-friction-wrapper .custom-row {
+    gap: 25px 0px;
+}
+
+.early-friction-cover ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: -74px;
+}
+
+.early-friction-cover ul li {
+    width: 25%;
+    flex: 0 0 auto;
+    padding-inline: 74px;
+}
+
+.early-friction-image {
+    margin-bottom: 10px;
+}
+
+.early-friction-box h3 {
+    font-weight: 400;
+    font-size: var(--font-24px);
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.early-friction-box p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+/* early-friction-wrapper Css End */
+
+
+/*  impact-wrapper Css Start */
+.impact-wrapper .custom-row {
+    margin-inline: -60px;
+}
+
+.impact-wrapper .custom-row .custom-col-5,
+.impact-wrapper .custom-row .custom-col-7 {
+    padding-inline: 60px;
+}
+
+.impact-wrapper h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.impact-wrapper p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+/*  impact-wrapper Css End */
+
+/* final-driving Css Start */
+.final-driving {
+    background: linear-gradient(180deg, #FFF 0%, rgba(196, 145, 89, 0.60) 11.87%, rgba(173, 145, 174, 0.60) 30.61%, rgba(29, 31, 23, 0.60) 54.47%, rgba(143, 38, 31, 0.60) 80.43%, #FFF 100%);
+}
+
+.final-driving-cover .custom-row {
+    gap: 150px 0px;
+}
+
+.final-driving h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.final-driving p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+.final-driving-cover h3 {
+    font-weight: 600;
+    font-size: var(--font-48px);
+    line-height: normal;
+    max-width: 93%;
+    margin-inline: auto;
+    padding-inline: 15px;
+    margin-bottom: 25px;
+}
+
+.final-driving-image img {
+    width: 100%;
+}
+
+/* final-driving Css End */
+
+/* custom-wrapper Css Start */
+.custom-wrapper {
+    padding-top: 75px;
+}
+
+.custom-wrapper p {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    line-height: normal;
+    margin-bottom: 50px;
+}
+
+.custom-wrapper-image img {
+    width: 100%;
+}
