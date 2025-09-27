@@ -865,21 +865,203 @@ span.active-profile {
 /* storyboard-wrapper Css End */
 
 /* infotainment-guideline-wrapper Css Start */
-.infotainment-guideline-wrapper .custom-row{
+.infotainment-guideline-wrapper .custom-row {
     margin-inline: -50px;
 }
-.infotainment-guideline-wrapper .custom-row .custom-col-6{
+
+.infotainment-guideline-wrapper .custom-row .custom-col-6 {
     padding-inline: 50px;
 }
-.infotainment-guideline-wrapper h2{
+
+.infotainment-guideline-wrapper h2 {
     font-weight: 400;
     font-size: var(--font-32px);
     line-height: normal;
     margin-bottom: 25px;
 }
-.infotainment-guideline-wrapper p{
+
+.infotainment-guideline-wrapper p {
     font-weight: 200;
     font-size: var(--font-16px);
     line-height: normal;
     margin-bottom: 0px;
+}
+
+.infotainment-guideline-cover {
+    height: 550px;
+}
+
+.infotainment-slider .slick-slide {
+    height: auto;
+}
+
+.infotainment-guideline-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.infotainment-guideline-box-image {
+    width: 140px;
+    flex: 0 0 auto;
+}
+
+.infotainment-guideline-image-content {
+    width: calc(100% - 140px);
+    padding-left: 20px;
+}
+
+.infotainment-guideline-image-content h3 {
+    font-weight: 400;
+    font-size: var(--font-24px);
+    margin-bottom: 20px;
+}
+
+.infotainment-guideline-image-content p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    margin-bottom: 0px;
+}
+
+.infotainment-slider .slick-track li+li {
+    margin-top: 30px !important;
+}
+
+/* infotainment-guideline-wrapper Css End */
+
+
+/* infotainment-final-wrapper Css Start */
+.infotainment-final {
+    border-radius: 20px;
+    background: #D7D1B3;
+    padding-block: 87px;
+}
+
+.infotainment-final .custom-col-10 .custom-row {
+    margin-inline: -43px;
+}
+
+.infotainment-final .custom-col-10 .custom-row .custom-col-8,
+.infotainment-final .custom-col-10 .custom-row .custom-col-4 {
+    padding-inline: 43px;
+}
+
+.infotainment-final-image-content p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.infotainment-final-image-content h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+.infotainment-final-image img {
+    width: 100%;
+}
+
+/* infotainment-final-wrapper Css End */
+
+/* sprint-wrapper Css Start */
+.sprint-wrapper h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.sprint-wrapper h2 {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+.sprint-image img {
+    width: 100%;
+}
+
+.sprint-wrapper .custom-row {
+    margin-inline: -79px;
+    gap: 50px 0px;
+}
+
+.sprint-wrapper .custom-row .custom-col-6,
+.sprint-wrapper .custom-row .custom-col-12 {
+    padding-inline: 79px;
+}
+
+/* sprint-wrapper Css End */
+
+/* deciding-wrapper Css Start */
+.deciding-wrapper>.container>.custom-row {
+    margin-inline: -19px;
+    gap: 50px 0px;
+}
+
+.deciding-wrapper>.container>.custom-row>.custom-col-6,
+.deciding-wrapper>.container>.custom-row>.custom-col-12 {
+    padding-inline: 19px;
+}
+
+.deciding-wrapper>.container>.custom-row>.custom-col-6 h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.deciding-wrapper>.container>.custom-row>.custom-col-6 p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+.deciding-cover {
+    border-radius: 20px;
+    background: #D7D1B3;
+    padding: 26px;
+}
+
+.deciding-cover h2 {
+    font-weight: 400;
+    font-size: var(--font-24px);
+    line-height: normal;
+    margin-bottom: 50px;
+}
+
+.deciding-cover ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-inline: -12px;
+}
+
+.deciding-cover ul li {
+    width: 50%;
+    flex: 0 0 auto;
+    padding-inline: 12px;
+}
+
+.deciding-cover ul li h3 {
+    font-weight: 200;
+    font-size: var(--font-20px);
+    line-height: normal;
+    margin-bottom: 37px;
+}
+
+.deciding-cover ul li p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+.deciding-image img {
+    width: 100%;
 }

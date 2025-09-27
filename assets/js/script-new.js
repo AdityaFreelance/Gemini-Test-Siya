@@ -364,3 +364,18 @@ $(document).ready(function () {
         ]
     });
 });
+
+$(document).ready(function () {
+    $('.infotainment-slider').slick({
+        vertical: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 2000,
+        cssEase: 'linear',
+        infinite: true,
+    });
+});
