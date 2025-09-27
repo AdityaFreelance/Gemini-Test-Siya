@@ -341,3 +341,26 @@ $(document).ready(function () {
 const styleSheet = document.createElement('style');
 styleSheet.textContent = additionalStyles;
 document.head.appendChild(styleSheet);
+
+
+// 
+
+$(document).ready(function () {
+    $('.design-principal-cover ul').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+});

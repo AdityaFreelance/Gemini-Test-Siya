@@ -164,4 +164,702 @@ span.active-profile {
 .design-cover {
     margin-top: 125px;
 }
+
 /* design-wrapper Css End */
+
+/* design-framework-wrapper Css Start */
+.design-framework-wrapper>.container>.custom-row {
+    gap: 10px 0px;
+}
+
+.design-framework-wrapper h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    margin-bottom: 25px;
+}
+
+.design-framework-cover-box ul,
+.design-framework-container>ul {
+    display: flex;
+    align-items: center;
+    margin-inline: -6px;
+}
+
+.design-framework-cover-box ul li,
+.design-framework-container>ul>li {
+    width: 16.667%;
+    flex: 0 0 auto;
+    padding-inline: 6px;
+}
+
+.design-framework-container-box {
+    position: relative;
+}
+
+.design-framework-container-box::before {
+    content: "";
+    width: 2px;
+    height: 73%;
+    border-left: 1px dotted #231F20;
+    display: inline-block;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.design-framework-container-box::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #231F20;
+    display: inline-block;
+    position: absolute;
+    top: -13px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.design-framework-container>ul>li:nth-child(1) .design-framework-container-box::before,
+.design-framework-container>ul>li:nth-child(1) .design-framework-container-box::after,
+.design-framework-container>ul>li:nth-child(6) .design-framework-container-box::before,
+.design-framework-container>ul>li:nth-child(6) .design-framework-container-box::after {
+    display: none;
+}
+
+.design-framework-container-box ul {
+    display: flex;
+    align-items: flex-end;
+    margin-inline: -10px;
+    height: 100%;
+}
+
+.design-framework-container-box ul li {
+    width: 50%;
+    height: 100%;
+    flex: 0 0 auto;
+    padding-inline: 10px;
+}
+
+.design-framework-box {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 10px;
+}
+
+.design-framework-box h3 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    margin-bottom: 0px;
+}
+
+.design-framework-cover-box ul li:nth-child(1) .design-framework-box {
+    background-color: #D7D1B3;
+}
+
+.design-framework-cover-box ul li:nth-child(2) .design-framework-box {
+    background-color: #C2BB97;
+}
+
+.design-framework-cover-box ul li:nth-child(3) .design-framework-box {
+    background-color: #B7AD7E;
+}
+
+.design-framework-cover-box ul li:nth-child(4) .design-framework-box {
+    background-color: #ACA169;
+}
+
+.design-framework-cover-box ul li:nth-child(5) .design-framework-box {
+    background-color: #9E935C;
+}
+
+.design-framework-cover-box ul li:nth-child(6) .design-framework-box {
+    background-color: #8E834C;
+}
+
+.design-framework-container-box {
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.design-framework-container-box-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+}
+
+.design-framework-container-box-content::before {
+    content: "";
+    width: 2px;
+    height: 73%;
+    border-left: 1px dotted #231F20;
+    display: inline-block;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.design-framework-container-box-content::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #231F20;
+    display: inline-block;
+    position: absolute;
+    top: -13px;
+    border-radius: 50%;
+    left: 49%;
+    transform: translateX(-50%);
+}
+
+
+.design-framework-container-box h4 {
+    position: relative;
+    padding-top: 5px;
+    font-weight: 400;
+    font-size: var(--font-24px);
+}
+
+.design-framework-container-box h4::before {
+    content: "";
+    width: 41px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: #231F20;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.design-framework-container-box p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    margin-bottom: 0px;
+    line-height: normal;
+}
+
+.design-framework-container>ul>li:last-child h4::before {
+    display: none;
+}
+
+/* design-framework-wrapper Css End */
+
+
+/* research-approach-wrapper Css Start */
+.research-approach-wrapper>.container>.custom-row {
+    gap: 150px 0px;
+}
+
+.research-approach-wrapper>.container>.custom-row>.custom-col-12>h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    margin-bottom: 25px;
+}
+
+.research-approach-wrapper>.container>.custom-row>.custom-col-12>p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    margin-bottom: 0px;
+}
+
+.approach-heading-cover {
+    display: flex;
+    align-items: center;
+    margin-inline: -25px;
+}
+
+.approach-heading-cover>div {
+    padding-inline: 25px;
+    flex: 0 0 auto;
+}
+
+.approach-heading-icon {
+    width: 275px;
+}
+
+.approach-heading-content {
+    width: calc(100% - 275px);
+}
+
+.approach-heading-content h3 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    margin-bottom: 0px;
+}
+
+.approach-heading-content h3 span {
+    color: #8E834C;
+}
+
+.approach-list-cover ul {
+    display: flex;
+    align-items: center;
+    margin-inline: -20px;
+}
+
+.approach-list-cover ul li {
+    width: 33.333%;
+    flex: 0 0 auto;
+    padding-inline: 20px;
+}
+
+.approach-list-box {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+}
+
+.approach-list-cover ul li:nth-child(1) .approach-list-box {
+    background-image: url(../img/porsche/approach1.png);
+}
+
+.approach-list-cover ul li:nth-child(2) .approach-list-box {
+    background-image: url(../img/porsche/approach2.png);
+}
+
+.approach-list-cover ul li:nth-child(3) .approach-list-box {
+    background-image: url(../img/porsche/approach3.png);
+}
+
+.approach-list-box h3 {
+    font-weight: 400;
+    font-size: var(--font-56px);
+    line-height: normal;
+    color: #D8D8DB;
+    margin-bottom: 25px;
+}
+
+.approach-list-box p {
+    font-weight: 200;
+    font-size: var(--font-20px);
+    color: #D8D8DB;
+    margin-bottom: 0px;
+}
+
+/* research-approach-wrapper Css End */
+
+/* Ev-wrapper Css Start */
+.Ev-wrapper {
+    background-image: url(../img/porsche/ev-image.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: auto;
+    padding-top: 290px;
+    padding-bottom: 60px;
+}
+
+.Ev-wrapper .custom-col-7 span {
+    font-weight: 400;
+    font-size: var(--font-20px);
+    margin-bottom: 25px;
+    display: inline-block;
+    color: #878787;
+}
+
+.Ev-wrapper .container>.custom-row {
+    gap: 145px 0px;
+}
+
+.Ev-wrapper .custom-col-7 h2 {
+    font-weight: 400;
+    font-size: var(--font-40px);
+    color: #F1E9E6;
+}
+
+.ev-wrapper-cover h3 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    margin-bottom: 25px;
+    color: #878787;
+}
+
+.ev-wrapper-cover p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    margin-bottom: 0px;
+    color: #878787;
+}
+
+/* Ev-wrapper Css End */
+
+/* how-wrapper Css Start */
+
+.how-wrapper-heading-cover {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+}
+
+.how-heading-cover-image {
+    width: 200px;
+    flex: 0 0 auto;
+}
+
+.how-heading-cover-content {
+    width: calc(100% - 200px);
+    padding-right: 200px;
+    flex: 0 0 auto;
+    height: 100%;
+}
+
+.how-heading-cover-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: -50px;
+    height: 100%;
+}
+
+.how-heading-cover-col-3 {
+    width: 30%;
+    flex: 0 0 auto;
+    padding-inline: 50px;
+}
+
+.how-heading-cover-col-7 {
+    width: 70%;
+    flex: 0 0 auto;
+    padding-inline: 50px;
+    height: 100%;
+}
+
+.how-heading-cover-row h2 {
+    font-weight: 400;
+    font-size: var(--font-24px);
+    margin-bottom: 0px;
+    color: #8E834C;
+}
+
+.how-heading-cover-row p {
+    font-weight: 200;
+    font-size: var(--font-20px);
+    margin-bottom: 0px;
+}
+
+.how-heading-cover-col-7-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.custom-col-12:has(.how-second-image) .custom-row {
+    margin-inline: -42px;
+}
+
+.custom-col-12:has(.how-second-image) .custom-row .custom-col-8,
+.custom-col-12:has(.how-second-image) .custom-row .col-lg-4 {
+    padding-inline: 42px;
+}
+
+.how-second-image img {
+    width: 100%;
+}
+
+.custom-col-12:has(.how-second-image) .custom-row .custom-col-8 h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    margin-bottom: 0px;
+}
+
+.custom-col-12:has(.how-second-image) .custom-row .custom-col-8 h2 span {
+    color: #8E834C;
+}
+
+.how-wrapper>.container>.custom-row {
+    gap: 150px 0px;
+}
+
+.how-third-section .custom-row {
+    margin-inline: -50px;
+}
+
+.how-third-section .custom-row .custom-col-6 {
+    padding-inline: 50px;
+}
+
+.how-third-image {
+    margin-bottom: 10px;
+}
+
+.how-third-image-content h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    margin-bottom: 25px;
+}
+
+.how-third-image-content p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    margin-bottom: 0px;
+}
+
+/* how-wrapper Css End */
+
+/* competitor-wrapper Css Start */
+.competitor-wrapper>.container>.custom-row {
+    gap: 90px 0px;
+}
+
+.competitor-wrapper h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.competitor-wrapper p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+}
+
+.competitor-box {
+    height: 100%;
+}
+
+.competitor-cover .custom-col-8>.custom-row {
+    margin-inline: -25px;
+    gap: 50px 0px;
+}
+
+.competitor-cover .custom-col-8>.custom-row>.custom-col-6 {
+    padding-inline: 25px;
+}
+
+.competitor-box .custom-row {
+    margin-inline: -12px;
+    height: 100%;
+}
+
+.competitor-box .custom-row .custom-col-6 {
+    padding-inline: 12px;
+    height: 100%;
+}
+
+.competitor-box p {
+    font-weight: 200;
+    font-size: var(--font-20px);
+    margin-bottom: 0px;
+}
+
+.competitor-box-image {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.competitor-box .custom-row .custom-col-6:nth-child(2) {
+    display: flex;
+    align-items: center;
+}
+
+/* competitor-wrapper Css End */
+
+
+/* experience-wrapper Css Start */
+.experience-wrapper h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.experience-wrapper p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+.experience-wrapper-image img {
+    width: 100%;
+}
+
+.experience-wrapper>.container>.custom-row {
+    margin-inline: -55px;
+}
+
+.experience-wrapper>.container>.custom-row>.custom-col-6 {
+    padding-inline: 55px;
+}
+
+/* experience-wrapper Css End */
+
+
+/* design-principals-wrapper Css Start */
+.design-principals-wrapper h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.design-principals-wrapper p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+.design-principals-wrapper .custom-row {
+    gap: 30px 0px;
+}
+
+.design-principal-cover h3 {
+    font-weight: 400;
+    font-size: var(--font-24px);
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.design-principals-box {
+    background-color: #D7D1B3;
+    padding: 30px 15px;
+    border-radius: 25px;
+    min-height: 220px;
+}
+
+.design-principal-cover ul li {
+    margin-inline: 20px;
+}
+
+/* design-principals-wrapper Css End */
+
+/* target-wrapper-porsche Css Start */
+.target-wrapper-porsche {
+    padding-top: 40px;
+    position: relative;
+    z-index: 99;
+    height: 530px;
+}
+
+.target-wrapper-porsche::before {
+    content: "";
+    width: 33.33%;
+    height: 100%;
+    background-image: url(../img/porsche/target-image1.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+.target-wrapper-porsche::after {
+    content: "";
+    width: 33.33%;
+    height: 100%;
+    background-image: url(../img/porsche/target-image2.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.target-wrapper-porsche>.container {
+    position: static;
+}
+
+.target-wrapper-porsche>.container::before {
+    content: "";
+    width: 33.33%;
+    height: 100%;
+    background-image: url(../img/porsche/target-image3.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+}
+
+.target-wrapper-porsche h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    margin-bottom: 118px;
+    color: #F1E9E6;
+}
+
+.target-wrapper-porsche-cover .custom-row {
+    margin-inline: -50px;
+}
+
+.target-wrapper-porsche-cover .custom-row .custom-col-4 {
+    padding-inline: 50px;
+}
+
+.target-porsche-box h3 {
+    font-weight: 400;
+    font-size: var(--font-24px);
+    margin-bottom: 25px;
+    color: #F1E9E6;
+}
+
+.target-porsche-box p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    margin-bottom: 0px;
+    color: #F1E9E6;
+}
+
+/* target-wrapper-porsche Css End */
+
+
+/* storyboard-wrapper Css Start */
+.storyboard-wrapper h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.storyboard-wrapper p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.storyboard-image img {
+    width: 100%;
+}
+
+/* storyboard-wrapper Css End */
