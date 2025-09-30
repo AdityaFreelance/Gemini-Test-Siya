@@ -1,0 +1,248 @@
+@font-face {
+    font-family: "Sideboard";
+    src: url("../fonts/sideboard-font/sideboard-personaluseonly.otf") format("otf)");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #231F20;
+    --secondry-color: #F1E9E6;
+    --para-line-color: #E36925;
+    --primary-font: "Lexend", sans-serif;
+    --secondary-font: "Sideboard", sans-serif;
+    --third-font: "Poppins", sans-serif;
+    /* 
+      Step 1: The single base font size variable you requested.
+    */
+    --base-font-size: 16px;
+
+    /* 
+      Step 2: Calculate all other font sizes based on the single variable.
+      The format is: calc(var(--base-font-size) * [multiplier]).
+    */
+    --font-10px: calc(var(--base-font-size) * 0.625);
+    --font-12px: calc(var(--base-font-size) * 0.75);
+    --font-15px: calc(var(--base-font-size) * 0.9375);
+    --font-16px: var(--base-font-size);
+    --font-18px: calc(var(--base-font-size) * 1.125);
+    --font-20px: calc(var(--base-font-size) * 1.25);
+    --font-24px: calc(var(--base-font-size) * 1.5);
+    --font-32px: calc(var(--base-font-size) * 2);
+    --font-40px: calc(var(--base-font-size) * 2.5);
+    --font-48px: calc(var(--base-font-size) * 3);
+    --font-56px: calc(var(--base-font-size) * 3.5);
+    --font-61px: calc(var(--base-font-size) * 3.8125);
+    --font-78px: calc(var(--base-font-size) * 4.875);
+    --font-96px: calc(var(--base-font-size) * 6);
+}
+
+html {
+    overflow-x: hidden !important;
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: #fff;
+    color: var(--primary-color);
+    font-size: var(--font-16px);
+}
+
+/* General Container */
+.container {
+    max-width: 93%;
+    padding-inline: 15px;
+    margin: 0 auto;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.list-unstyled {
+    list-style: none;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.pBlock-150 {
+    padding-block: 150px;
+}
+
+.mb-150 {
+    margin-bottom: 150px;
+}
+
+.pBlock-55 {
+    padding-block: 55px;
+}
+
+.mb-0 {
+    margin-bottom: 0px;
+}
+
+.pt-0 {
+    padding-top: 0px !important;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.custom-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: -15px;
+}
+
+.custom-col-12,
+.custom-col-10,
+.custom-col-6,
+.custom-col-5,
+.custom-col-7,
+.custom-col-4,
+.custom-col-8,
+.custom-col-3,
+.custom-col-9 {
+    flex: 0 0 auto;
+    padding-inline: 15px;
+}
+
+.custom-col-12 {
+    width: 100%;
+}
+
+.custom-col-10 {
+    width: 86%;
+}
+
+.custom-col-6 {
+    width: 50%;
+}
+
+.custom-col-3 {
+    width: 25%;
+}
+
+.custom-col-9 {
+    width: 75%;
+}
+
+.custom-col-4 {
+    width: 33.333%;
+}
+
+.custom-col-8 {
+    width: 66.667%;
+}
+
+.custom-col-7 {
+    width: 58.333%;
+}
+
+.custom-col-5 {
+    width: 40%;
+}
+
+.custom-col-7 {
+    width: 60%;
+}
+
+
+
+/* banner-wrapper Css Start */
+.banner-wrapper {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: #0C0C0C;
+}
+
+.banner-wrapper p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    margin-bottom: 25px;
+    color: #F1E9E6;
+}
+
+.banner-wrapper h1 {
+    font-weight: 400;
+    font-size: var(--font-24px);
+    line-height: normal;
+    margin-bottom: 0px;
+    color: #F1E9E6;
+}
+
+.banner-wrapper .custom-row {
+    margin-inline: -110px;
+}
+
+.banner-wrapper .custom-row .custom-col-6 {
+    padding-inline: 110px;
+}
+
+/* banner-wrapper Css End */
+
+/* about-wrapper Css Start */
+section.about-wrapper h2 {
+    font-weight: 400;
+    font-size: var(--font-32px);
+    line-height: normal;
+    margin-bottom: 150px;
+}
+
+.about-image-content h3 {
+    font-weight: 400;
+    font-size: var(--font-24px);
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.about-image-content p {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.about-image-content span {
+    font-weight: 200;
+    font-size: var(--font-16px);
+    line-height: normal;
+    display: inline-block;
+    margin-bottom: 0px;
+    color: #878787;
+}
+
+.about-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-inline: -60px;
+}
+
+.about-image-col,
+.about-image-content {
+    width: 50%;
+    flex: 0 0 auto;
+    padding-inline: 60px;
+}
+
+.about-image-box {
+    text-align: center;
+}
+
+.about-image-box+.about-image-box {
+    margin-top: 100px;
+}
