@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.querySelector('.menu-toggle');
+    const menuToggle = document.querySelector('.menu-open');
     const menuContainer = document.querySelector('.menu-container');
 
     if (menuToggle && menuContainer) {

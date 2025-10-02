@@ -179,6 +179,10 @@ body {
     align-items: center;
 }
 
+.menu-open {
+    display: none;
+}
+
 .menu-toggle svg path {
     stroke: var(--secondry-color);
 }
@@ -4428,9 +4432,14 @@ ul.testing-slider-dots {
     gap: 50px 0px;
 }
 
-.project-wrapper .container {
+.project-slider-cover .container {
     margin-right: 0px;
     padding-right: 0px;
+    max-width: 98%;
+}
+
+.project-slider-cover {
+    margin-top: 50px;
 }
 
 .project-box {
@@ -4487,6 +4496,10 @@ ul.testing-slider-dots {
 
 .project-row .slick-slide {
     margin-inline: 30px;
+}
+
+.desk {
+    display: none;
 }
 
 /* project-wrapper Css End */
