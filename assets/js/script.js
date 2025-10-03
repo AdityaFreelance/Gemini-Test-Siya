@@ -170,101 +170,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', updateActiveNavLink);
 
-    // Mobile menu toggle (for future enhancement)
-    const createMobileMenu = () => {
-        const navContainer = document.querySelector('.nav-container');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        // Create mobile menu button
-        const mobileMenuBtn = document.createElement('button');
-        mobileMenuBtn.classList.add('mobile-menu-btn');
-        mobileMenuBtn.innerHTML = '☰';
-        mobileMenuBtn.style.display = 'none';
-        mobileMenuBtn.style.background = 'none';
-        mobileMenuBtn.style.border = 'none';
-        mobileMenuBtn.style.color = '#ffffff';
-        mobileMenuBtn.style.fontSize = '1.5rem';
-        mobileMenuBtn.style.cursor = 'pointer';
-        
-        navContainer.appendChild(mobileMenuBtn);
-        
-        // Toggle mobile menu
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('mobile-active');
-        });
-        
-        // Show/hide mobile menu button based on screen size
-        const checkScreenSize = () => {
-            if (window.innerWidth <= 768) {
-                mobileMenuBtn.style.display = 'block';
-                navMenu.classList.add('mobile-menu');
-            } else {
-                mobileMenuBtn.style.display = 'none';
-                navMenu.classList.remove('mobile-menu', 'mobile-active');
-            }
-        };
-        
-        window.addEventListener('resize', checkScreenSize);
-        checkScreenSize();
-    };
-    
-    createMobileMenu();
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenusWrapper = document.querySelector('.nav-menus-wrapper');
 
-    // Preload images for better performance
-    const preloadImages = () => {
-        const images = document.querySelectorAll('img');
-        images.forEach(img => {
-            const imageUrl = img.src;
-            const preloadImg = new Image();
-            preloadImg.src = imageUrl;
+    if (mobileMenuBtn && navMenusWrapper) {
+        mobileMenuBtn.addEventListener('click', function() {
+            navMenusWrapper.classList.toggle('nav-menus-wrapper-active');
         });
-    };
-    
-    preloadImages();
-
-    // Resume accordion functionality
-    const initResumeAccordions = () => {
-        const expandButtons = document.querySelectorAll('.resume-expand-btn');
-        
-        expandButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const targetId = this.getAttribute('data-target');
-                
-                if (targetId) {
-                    const content = document.getElementById(targetId);
-                    
-                    if (content) {
-                        // Toggle expanded class on content
-                        content.classList.toggle('expanded');
-                        
-                        // Toggle expanded class on button for rotation
-                        this.classList.toggle('expanded');
-                        
-                        // Close other accordions in the same section
-                        const currentSection = this.closest('.resume-section');
-                        const otherButtons = currentSection.querySelectorAll('.resume-expand-btn');
-                        const otherContents = currentSection.querySelectorAll('.resume-item-content');
-                        
-                        otherButtons.forEach(otherButton => {
-                            if (otherButton !== this) {
-                                otherButton.classList.remove('expanded');
-                            }
-                        });
-                        
-                        otherContents.forEach(otherContent => {
-                            if (otherContent !== content) {
-                                otherContent.classList.remove('expanded');
-                            }
-                        });
-                    }
-                }
-            });
-        });
-    };
-    
-    // Initialize accordion functionality if on resume page
-    if (document.querySelector('.resume-main')) {
-        initResumeAccordions();
     }
 });
 

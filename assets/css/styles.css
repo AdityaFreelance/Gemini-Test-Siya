@@ -447,7 +447,9 @@ body {
         flex-direction: column;
         gap: 1rem;
     }
-    
+    .nav-menus-wrapper{
+        display: none;
+    }
     .nav-menu {
         gap: 1.5rem;
         padding: 15px;
