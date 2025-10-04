@@ -288,7 +288,8 @@ span {
 
 /* Tool Kit Slider Styles */
 .tool-kit-box-content .slick-slider {
-    height: 250px; /* Adjust as needed */
+    height: 250px;
+    /* Adjust as needed */
 }
 
 .tool-kit-box-content .slick-list {
@@ -297,4 +298,16 @@ span {
 
 .tool-kit-box-content .slick-track {
     height: 100% !important;
+}
+
+.tool-kit-box {
+    height: 100%;
+}
+
+.tool-kit-box-content {
+    height: calc(100% - 45px);
+}
+
+.tool-kit-box-content .slick-slider {
+    height: 100%;
 }
