@@ -67,6 +67,7 @@ nav.nav-bar {
 }
 
 .menu-collapse-box ul {
+    list-style: none;
     padding: 20px 30px;
     border-radius: 10px;
     background: #212021;

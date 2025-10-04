@@ -191,6 +191,7 @@ span {
 /* work-experience Css Start */
 .work-experience-box-row {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -233,15 +234,16 @@ span {
     margin-top: 25px;
 }
 
-/* Accordion Styles */
-.work-experience-accordion-button {
+.work-experience-accordion-button,
+.custom-accordion-button {
     cursor: pointer;
     position: relative;
     border-radius: 20px;
     padding: 12px 35px;
 }
 
-.work-experience-accordion-button::after {
+.work-experience-accordion-button::after,
+.custom-accordion-button::after {
     content: '';
     position: absolute;
     right: 15px;
@@ -255,7 +257,8 @@ span {
     background-position: center;
 }
 
-.work-experience-accordion-button h3 a {
+.work-experience-accordion-button h3 a,
+.custom-accordion-button h3 span {
     color: #c76135;
 }
 
@@ -263,42 +266,35 @@ span {
     text-decoration: underline !important;
 }
 
-.work-experience-box-content {
+.work-experience-box-content,
+.custom-accordion-content {
     display: none;
     padding-top: 15px;
     padding: 0px 35px;
 }
 
-.work-experience-accordion-row+.work-experience-accordion-row {
+.work-experience-accordion-row+.work-experience-accordion-row,
+.custom-accordion-row+.custom-accordion-row {
     margin-top: 50px;
 }
 
-.work-experience-box-content ul {
+.work-experience-box-content ul,
+.custom-accordion-content ul {
     padding-left: 25px;
 }
 
-.work-experience-box-content ul li+li {
+.work-experience-box-content ul li+li,
+.custom-accordion-content ul li+li {
     margin-top: 10px;
 }
 
-.work-experience-box-content ul li p {
+.work-experience-box-content ul li p,
+.custom-accordion-content ul li p {
     display: flex;
     align-items: center;
 }
 
-/* Tool Kit Slider Styles */
-.tool-kit-box-content .slick-slider {
-    height: 250px;
-    /* Adjust as needed */
-}
 
-.tool-kit-box-content .slick-list {
-    height: 100% !important;
-}
-
-.tool-kit-box-content .slick-track {
-    height: 100% !important;
-}
 
 .tool-kit-box {
     height: 100%;
@@ -308,6 +304,44 @@ span {
     height: calc(100% - 45px);
 }
 
-.tool-kit-box-content .slick-slider {
-    height: 100%;
+
+.tool-kit-box-content .slick-slider .slick-list.draggable {
+    height: 770px !important;
+}
+
+/* work-experience Css End */
+
+
+
+/* awards-wrapper Css Start */
+.award-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.awards-cover ul li+li {
+    margin-top: 50px;
+}
+
+/* awards-wrapper Css End */
+
+/* resume-wrapper Start */
+.resume-wrapper .custom-row {
+    margin-inline: -100px;
+}
+
+.resume-wrapper .custom-row .custom-col-6 {
+    padding-inline: 100px;
+}
+
+.resume-image {
+    text-align: right;
+}
+
+.resume-btn-box a {
+    border-radius: 10px;
+    background: #212021;
+    padding: 20px 30px;
+    color: #F1E9E6;
 }
