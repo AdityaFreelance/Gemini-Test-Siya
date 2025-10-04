@@ -253,20 +253,48 @@ span {
     background-size: 25px 17px;
     background-repeat: no-repeat;
     background-position: center;
-    transition: transform 0.3s ease;
 }
 
-.work-experience-accordion-button.active::after {
-    transform: translateY(-50%) rotate(45deg);
+.work-experience-accordion-button h3 a {
+    color: #c76135;
 }
 
-
+.work-experience-accordion-button:hover h3 a {
+    text-decoration: underline !important;
+}
 
 .work-experience-box-content {
     display: none;
     padding-top: 15px;
     padding: 0px 35px;
 }
-.work-experience-accordion-row + .work-experience-accordion-row{
+
+.work-experience-accordion-row+.work-experience-accordion-row {
     margin-top: 50px;
+}
+
+.work-experience-box-content ul {
+    padding-left: 25px;
+}
+
+.work-experience-box-content ul li+li {
+    margin-top: 10px;
+}
+
+.work-experience-box-content ul li p {
+    display: flex;
+    align-items: center;
+}
+
+/* Tool Kit Slider Styles */
+.tool-kit-box-content .slick-slider {
+    height: 250px; /* Adjust as needed */
+}
+
+.tool-kit-box-content .slick-list {
+    height: 100% !important;
+}
+
+.tool-kit-box-content .slick-track {
+    height: 100% !important;
 }

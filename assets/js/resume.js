@@ -11,4 +11,16 @@ $(document).ready(function() {
         content.slideToggle();
         $(this).toggleClass('active');
     });
+
+    $('.tool-kit-box-content .list-unstyled').slick({
+        vertical: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 3000,
+        cssEase: 'linear',
+        arrows: false,
+        dots: false
+    });
 });
