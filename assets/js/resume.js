@@ -12,7 +12,15 @@ $(document).ready(function() {
         $(this).toggleClass('active');
     });
 
-    $('.tool-kit-box-content .list-unstyled').slick({
+    var toolKitList = $('.tool-kit-box-content .list-unstyled');
+    var originalItems = toolKitList.children('li').clone();
+
+    // Clone the items a few times to create a long list
+    for (var i = 0; i < 3; i++) {
+        toolKitList.append(originalItems.clone());
+    }
+
+    toolKitList.slick({
         vertical: true,
         slidesToShow: 3,
         slidesToScroll: 1,
