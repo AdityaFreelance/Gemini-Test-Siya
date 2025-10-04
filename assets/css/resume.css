@@ -331,6 +331,10 @@ span {
     margin-inline: -100px;
 }
 
+.resume-wrapper {
+    position: relative;
+}
+
 .resume-wrapper .custom-row .custom-col-6 {
     padding-inline: 100px;
 }
@@ -344,4 +348,49 @@ span {
     background: #212021;
     padding: 20px 30px;
     color: #F1E9E6;
+}
+
+.resume-wrapper::after {
+    content: "";
+    width: 100%;
+    height: 8px;
+    display: inline-block;
+    position: absolute;
+    bottom: -2px;
+    left: 0px;
+    background-color: #0c0c0c;
+    z-index: 99;
+}
+
+/* resume-wrapper End */
+
+
+/* responsive Css */
+
+@media screen and (max-width:1800px) {
+    .education-wrapper .custom-row {
+        margin-inline: -100px;
+    }
+
+    .education-wrapper .custom-row .custom-col-6 {
+        padding-inline: 100px;
+    }
+
+    .work-experience-box-col {
+        width: calc(100% - 250px);
+        padding-right: 300px;
+    }
+
+    .pBlock-150 {
+        padding-block: 100px;
+    }
+
+    .work-experience-accordion-row+.work-experience-accordion-row,
+    .custom-accordion-row+.custom-accordion-row {
+        margin-top: 40px;
+    }
+
+    .awards-cover ul li+li {
+        margin-top: 40px;
+    }
 }

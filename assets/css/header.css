@@ -68,7 +68,7 @@ nav.nav-bar {
 
 .menu-collapse-box ul {
     list-style: none;
-    padding: 20px 30px;
+    padding: 10px 20px;
     border-radius: 10px;
     background: #212021;
     display: flex;
@@ -79,15 +79,35 @@ nav.nav-bar {
 .navbar-link {
     color: #F1E9E6 !important;
     font-size: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
     font-style: normal;
     font-weight: 200;
     line-height: normal;
 }
 
 .navbar-box-btn {
-    padding: 20px 25px;
+    padding: 10px 20px;
     border-radius: 10px;
     background: #212021;
 }
 
 /* Header Css End */
+
+
+/* responsive header Css */
+
+@media screen and (max-width:1680px) {
+    nav.nav-bar {
+        padding-block: 25px;
+    }
+
+    .menu-collapse-box ul {
+        padding: 8px 18px;
+        border-radius: 10px;
+        gap: 0px 24px;
+    }
+}
