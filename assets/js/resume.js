@@ -1,4 +1,13 @@
 $(document).ready(function () {
+    const menuCollapseBtn = document.getElementById('menu-collapse-btn-id');
+    const menuCollapseBox = document.getElementById('menu-collapse-box-id');
+
+    if (menuCollapseBtn && menuCollapseBox) {
+        menuCollapseBtn.addEventListener('click', () => {
+            menuCollapseBox.classList.toggle('menu-collapse-box-active');
+        });
+    }
+
     $('.work-experience-accordion-button').on('click', function () {
         // The accordion content is the next element sibling
         var content = $(this).next('.work-experience-box-content');
@@ -42,6 +51,24 @@ $(document).ready(function () {
         speed: 3000,
         cssEase: 'linear',
         arrows: false,
-        dots: false
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 700,
+                settings: {
+                    vertical: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 475,
+                settings: {
+                    vertical: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 });
