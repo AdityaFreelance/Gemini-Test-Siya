@@ -844,8 +844,7 @@ ul.research-list li:nth-child(1) .research-box-container p::after,
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 50%;
-    /* Each slide takes 50% of the container height to show two */
+    height: auto !important;
     width: 100%;
 }
 
@@ -2767,8 +2766,7 @@ ul.research-list li:nth-child(1) .research-box-container p::after,
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 50%;
-    /* Each slide takes 50% of the container height to show two */
+    height: auto !important;
     width: 100%;
 }
 
