@@ -6,29 +6,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add click event listeners to navigation links
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
             const targetId = this.getAttribute('href');
-            
-            // Handle different navigation targets
-            if (targetId === '#home') {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            } else if (targetId === '#about') {
-                const aboutSection = document.querySelector('.about');
-                if (aboutSection) {
-                    aboutSection.scrollIntoView({
+
+            if (targetId && targetId.startsWith('#')) {
+                e.preventDefault();
+
+                if (targetId === '#home') {
+                    window.scrollTo({
+                        top: 0,
                         behavior: 'smooth'
                     });
-                }
-            } else if (targetId === '#projects') {
-                const projectsSection = document.querySelector('.projects');
-                if (projectsSection) {
-                    projectsSection.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                } else {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
                 }
             }
         });

@@ -447,7 +447,7 @@ button.menu-toggle svg {
     margin-bottom: 0px;
 }
 
-.summary-cover-image img {
+.summary-cover-image iframe {
     width: 100%;
 }
 

@@ -379,3 +379,15 @@ $(document).ready(function () {
         infinite: true,
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    if (menuToggle) {
+        const currentPage = window.location.pathname.split('/').pop();
+        if (currentPage === 'loop.html' || currentPage === 'setu.html' || currentPage === 'porsche.html') {
+            menuToggle.addEventListener('click', function() {
+                window.location.href = 'index.html';
+            });
+        }
+    }
+});
