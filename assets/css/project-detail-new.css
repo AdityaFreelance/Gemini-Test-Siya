@@ -201,11 +201,11 @@ button.menu-toggle svg {
 .navbar-list {
     display: flex;
     align-items: center;
-    gap: 0px 45px;
+    gap: 0px 25px;
     list-style: none;
     border-radius: 10px;
     margin: 0;
-    padding: 20px 20px;
+    padding: 10px 10px;
     background-color: var(--primary-color);
 }
 
@@ -213,6 +213,19 @@ button.menu-toggle svg {
     color: var(--secondry-color);
     text-decoration: none;
     font-size: var(--font-16px);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.nav-link:hover {
+    background-color: #C76135;
+    border-radius: 9px;
+    color: var(--secondry-color);
+}
+.nav-link::after{
+    display: none;
 }
 
 /* Header Css End */
@@ -758,10 +771,13 @@ ul.research-list li:nth-child(1) .research-box-container p::after,
 }
 
 .primary-graph span {
-    position: relative;
+    position: absolute;
     z-index: 2;
     font-weight: 400;
     font-size: var(--font-48px);
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .primary-content {
@@ -1466,7 +1482,7 @@ span.portfolio-icon {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(10, 1fr);
     /* 10 rows for fine control */
-    width: 800px;
+    width: 100%;
     height: 500px;
     border-radius: 9px;
     overflow: hidden;
@@ -2103,11 +2119,11 @@ button.menu-toggle svg {
 .navbar-list {
     display: flex;
     align-items: center;
-    gap: 0px 45px;
+    gap: 0px 24px;
     list-style: none;
     border-radius: 10px;
     margin: 0;
-    padding: 20px 20px;
+    padding: 10px 10px;
     background-color: var(--primary-color);
 }
 
@@ -2679,12 +2695,7 @@ ul.research-list li:nth-child(1) .research-box-container p::after,
             transparent calc(var(--value) * 3.6deg) 360deg);
 }
 
-.primary-graph span {
-    position: relative;
-    z-index: 2;
-    font-weight: 400;
-    font-size: var(--font-48px);
-}
+
 
 .primary-content {
     display: flex;
@@ -3388,7 +3399,7 @@ span.portfolio-icon {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(10, 1fr);
     /* 10 rows for fine control */
-    width: 800px;
+    width: 100%;
     height: 500px;
     border-radius: 9px;
     overflow: hidden;
