@@ -1,11 +1,11 @@
 @media screen and (max-width:1800px) {
-    :root {
+    /* :root {
         --base-font-size: 13px !important;
     }
 
     p {
         font-size: 18px !important;
-    }
+    } */
 
     .pBlock-150 {
         padding-block: 120px;
@@ -173,9 +173,9 @@
         padding-block: 90px;
     }
 
-    :root {
+    /* :root {
         --base-font-size: 12px !important;
-    }
+    } */
 
     .portfolio-wrapper>.container>.custom-row,
     .summary-wrapper .custom-col-10>.custom-row>.custom-col-6 {
@@ -607,7 +607,7 @@
 
 @media screen and (max-width:1200px) {
     :root {
-        --base-font-size: 9px !important;
+        --base-font-size: 10px !important;
     }
 }
 
