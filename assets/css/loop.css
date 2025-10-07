@@ -40,6 +40,30 @@
     background-color: transparent !important;
 }
 
+.design-top {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: 10%;
+    margin-bottom: -0.9%;
+    position: relative;
+}
+
+.target-wrapper .container>.custom-row {
+    gap: 120px 0px;
+}
+
+.design-bottom {
+    max-width: 66%;
+    margin-right: auto;
+    margin-left: 7%;
+    margin-top: 0%;
+}
+
+.design-top img,
+.design-bottom img {
+    width: 100%;
+}
+
 /* design-framework-wrapper Css End */
 
 

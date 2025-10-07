@@ -353,7 +353,9 @@ $(document).ready(function () {
         dots: false,
         infinite: true,
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 0,
+        speed: 6000,
+        cssEase: 'linear',
         responsive: [
             {
                 breakpoint: 768,
@@ -390,4 +392,16 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+});
+
+$(document).ready(function(){
+  $('.meet-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots: false,
+    arrows: false,
+    infinite: true
+  });
 });
